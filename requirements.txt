@@ -1,0 +1,15 @@
+aiofiles>=24.1.0
+aiohttp>=3.12.15
+alembic>=1.16.4
+asyncio-throttle>=1.0.2
+asyncpg>=0.30.0
+decouple>=0.0.7
+python-decouple>=3.8
+regex>=2025.7.34
+requests>=2.31.0
+sqlalchemy>=2.0.43
+supabase>=2.0.0
+telethon>=1.40.0
+ujson>=5.10.0
+uvloop>=0.21.0
+websockets>=11.0

@@ -1,0 +1,642 @@
+2025-12-08 11:38:13,482 - [telethon.crypto.libssl] - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2025-12-08 11:38:13,483 - [telethon.crypto.aes] - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2025-12-08 11:38:16,196 - [bot] - INFO - ✅ Supabase credentials validated successfully
+2025-12-08 11:38:16,260 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-12-08 11:38:17,708 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-12-08 11:38:17,962 - [bot] - ERROR - Fatal error in main: The provided API id is invalid (caused by InvokeWithLayerRequest(InitConnectionRequest(GetConfigRequest)))
+Traceback (most recent call last):
+  File "/home/runner/workspace/bot.py", line 497, in main
+    await asyncio.wait_for(bot.initialize(), timeout=30.0)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 489, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/home/runner/workspace/bot.py", line 106, in initialize
+    await self.bot_client.start(bot_token=BOT_TOKEN)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telethon/client/auth.py", line 135, in _start
+    await self.connect()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telethon/client/telegrambaseclient.py", line 598, in connect
+    await self._sender.send(functions.InvokeWithLayerRequest(LAYER, req))
+telethon.errors.rpcerrorlist.ConnectionApiIdInvalidError: The provided API id is invalid (caused by InvokeWithLayerRequest(InitConnectionRequest(GetConfigRequest)))
+2025-12-08 11:44:45,303 - [telethon.crypto.libssl] - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2025-12-08 11:44:45,306 - [telethon.crypto.aes] - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2025-12-08 11:44:45,974 - [bot] - INFO - ✅ Supabase credentials validated successfully
+2025-12-08 11:44:45,975 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-12-08 11:44:46,079 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-12-08 11:44:46,798 - [telethon.client.users] - INFO - Phone migrated to 4
+2025-12-08 11:44:46,799 - [telethon.client.telegrambaseclient] - INFO - Reconnecting to new data center 4
+2025-12-08 11:44:46,931 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-12-08 11:44:46,931 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-12-08 11:44:46,931 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 11:44:48,469 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 11:44:49,299 - [handlers_telethon] - INFO - 📝 Registering BOT client handlers...
+2025-12-08 11:44:49,301 - [handlers_telethon] - INFO - ✅ BOT client handlers registered
+2025-12-08 11:44:49,643 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-12-08 11:44:50,992 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-12-08 11:44:51,574 - [telethon.client.users] - INFO - Phone migrated to 4
+2025-12-08 11:44:51,574 - [telethon.client.telegrambaseclient] - INFO - Reconnecting to new data center 4
+2025-12-08 11:44:51,584 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-12-08 11:44:51,585 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-12-08 11:44:51,586 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 11:44:53,459 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 11:45:03,282 - [bot] - INFO - User client authenticated successfully with 2FA
+2025-12-08 11:45:03,693 - [handlers_telethon] - INFO - 📝 Registering USER client handlers...
+2025-12-08 11:45:03,693 - [handlers_telethon] - WARNING - ⚠️ No active channels to monitor
+2025-12-08 11:45:03,693 - [realtime._async.client] - INFO - Attempting to connect to WebSocket at wss://ofririwzonwekmyqgqlg.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcmlyaXd6b253ZWtteXFncWxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDM1MzYsImV4cCI6MjA3Njk3OTUzNn0.1PQ9Fg4V04kaCZQm_7c88p65cOWboAs1htzjvQ_Tsko
+2025-12-08 11:45:04,009 - [realtime._async.client] - INFO - WebSocket connection established successfully
+2025-12-08 11:45:04,010 - [realtime._async.client] - INFO - send: {"event":"phx_join","payload":{"config":{"broadcast":{"ack":false,"self":false},"presence":{"key":"","enabled":false},"private":false,"postgres_changes":[{"events":"UPDATE","table":"verify_requests","schema":"public"}]},"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcmlyaXd6b253ZWtteXFncWxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDM1MzYsImV4cCI6MjA3Njk3OTUzNn0.1PQ9Fg4V04kaCZQm_7c88p65cOWboAs1htzjvQ_Tsko"},"topic":"realtime:verify_status_updates","ref":"1","join_ref":null}
+2025-12-08 11:45:04,011 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:45:04,044 - [realtime._async.client] - INFO - receive: '{"ref":"1","event":"phx_reply","payload":{"status":"ok","response":{"postgres_changes":[{"id":35695495,"events":"UPDATE","schema":"public","table":"verify_requests"}]}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 11:45:04,046 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=[PostgresRowChange(id=35695495, events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'>, table='verify_requests', schema_='public', filter=None)])) ref='1'
+2025-12-08 11:45:04,046 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=[PostgresRowChange(id=35695495, events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'>, table='verify_requests', schema_='public', filter=None)])) ref='1'
+2025-12-08 11:45:04,046 - [realtime._async.channel] - INFO - id=35695495 events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'> table='verify_requests' schema_='public' filter=None, PostgresChangesCallback(callback=<bound method UltraFastTradingBot._handle_verification_update of <bot.UltraFastTradingBot object at 0x7ff6449a2cd0>>, event='UPDATE', table='verify_requests', schema='public', filter=None, id=None)
+2025-12-08 11:45:04,046 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:45:04,046 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:45:04,474 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"system","payload":{"message":"Subscribed to PostgreSQL","status":"ok","extension":"postgres_changes","channel":"verify_status_updates"},"topic":"realtime:verify_status_updates"}'
+2025-12-08 11:45:04,475 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.system: 'system'> topic='realtime:verify_status_updates' payload=SuccessSystemPayload(channel='verify_status_updates', extension='postgres_changes', message='Subscribed to PostgreSQL', status='ok') ref=None
+2025-12-08 11:45:04,475 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.system: 'system'> topic='realtime:verify_status_updates' payload=SuccessSystemPayload(channel='verify_status_updates', extension='postgres_changes', message='Subscribed to PostgreSQL', status='ok') ref=None
+2025-12-08 11:45:29,012 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:45:29,044 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:45:29,044 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:45:37,303 - [models] - DEBUG - 💾 Created new user 6601959348 in database with default settings
+2025-12-08 11:45:53,605 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 11:45:54,014 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:45:54,042 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:45:54,043 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:45:56,159 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 11:45:56,420 - [handlers_telethon] - INFO - ✅ User 6601959348 marked as verified
+2025-12-08 11:46:06,777 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 11:46:19,015 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:46:19,046 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:46:19,046 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:46:44,017 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:46:44,045 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:46:44,045 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:47:09,018 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:47:09,048 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:47:09,049 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:47:34,022 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:47:34,052 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:47:34,052 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:47:59,024 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:47:59,054 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:47:59,055 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:48:24,026 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:48:24,054 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:48:24,055 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:48:49,027 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:48:49,056 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:48:49,057 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:49:14,028 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:49:14,057 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:49:14,057 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:49:39,029 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:49:39,061 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:49:39,062 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:50:02,982 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 11:50:04,030 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:50:04,059 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:50:04,060 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:50:29,031 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:50:29,062 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:50:29,062 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:50:54,031 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:50:54,060 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:50:54,061 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:51:19,032 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:51:19,062 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:51:19,062 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:51:44,032 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:51:44,061 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:51:44,061 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:52:09,032 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:52:09,059 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:52:09,060 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:52:34,033 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:52:34,062 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:52:34,063 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:52:59,035 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:52:59,067 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:52:59,068 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:53:24,037 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:53:24,065 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:53:24,066 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:53:49,038 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:53:49,069 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:53:49,070 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:54:14,038 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:54:14,073 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:54:14,074 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:54:39,039 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:54:39,067 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:54:39,067 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:55:04,040 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:55:04,070 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:55:04,070 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:55:29,041 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:55:29,071 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:55:29,071 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:55:54,042 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:55:54,071 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:55:54,072 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:56:19,043 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:56:19,075 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:56:19,077 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:56:44,061 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:56:44,091 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:56:44,091 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:57:09,062 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:57:09,093 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:57:09,094 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:57:34,064 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:57:34,092 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:57:34,092 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:57:59,065 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:57:59,093 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:57:59,094 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:58:24,067 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:58:24,095 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:58:24,096 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:58:49,068 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:58:49,097 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:58:49,098 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:59:14,069 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:59:14,112 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:59:14,112 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 11:59:39,070 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 11:59:39,102 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 11:59:39,102 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:00:03,409 - [telethon.client.updates] - INFO - Got difference for account updates
+2025-12-08 12:00:04,071 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:00:04,099 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:00:04,100 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:00:09,963 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:00:29,071 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:00:29,098 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:00:29,099 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:00:48,963 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:00:54,072 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:00:54,105 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:00:54,106 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:00:54,777 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:00:54,911 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:01:07,574 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:01:07,748 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:01:10,852 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:01:10,975 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:01:19,073 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:01:19,103 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:01:19,104 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:01:25,798 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:01:27,662 - [telethon.client.updates] - INFO - Got difference for channel 3186765282 updates
+2025-12-08 12:01:28,294 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:01:28,457 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:01:44,072 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:01:44,101 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:01:44,101 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:01:54,829 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:01:54,972 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:02:09,073 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:02:09,102 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:02:09,103 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:02:16,383 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:02:16,531 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:02:34,073 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:02:34,104 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:02:34,104 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:02:54,358 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:02:54,523 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:02:59,074 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:02:59,110 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:02:59,111 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:03:24,074 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:03:24,106 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:03:24,107 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:03:49,076 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:03:49,104 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:03:49,106 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:03:54,890 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:03:55,039 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:04:14,077 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:04:14,108 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:04:14,109 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:04:39,077 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:04:39,105 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:04:39,106 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:04:53,804 - [telethon.client.updates] - INFO - Got difference for channel 1967836950 updates
+2025-12-08 12:04:53,948 - [telethon.client.updates] - INFO - Got difference for channel 1872223162 updates
+2025-12-08 12:05:04,078 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:05:04,107 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:05:04,108 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:05:29,078 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:05:29,108 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:05:29,109 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:05:52,997 - [bot] - INFO - Received signal 15
+2025-12-08 12:05:53,229 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"2","join_ref":null}
+2025-12-08 12:05:53,231 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:05:53,232 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:05:53,232 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:05:53,260 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"3","join_ref":null}
+2025-12-08 12:05:53,266 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:05:53,266 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:05:53,285 - [realtime._async.client] - INFO - receive: '{"ref":"2","event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:05:53,285 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='2'
+2025-12-08 12:05:53,285 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='2'
+2025-12-08 12:05:53,285 - [realtime._async.channel] - INFO - channel realtime:verify_status_updates leave
+2025-12-08 12:05:53,285 - [realtime._async.channel] - INFO - channel realtime:verify_status_updates closed
+2025-12-08 12:05:53,285 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_close","payload":{},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:05:53,285 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.close: 'phx_close'> topic='realtime:verify_status_updates' payload={} ref=None
+2025-12-08 12:05:53,286 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:05:53,286 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:05:53,286 - [telethon.network.mtprotosender] - INFO - Disconnection from None complete!
+2025-12-08 12:05:53,306 - [realtime._async.client] - INFO - receive: '{"ref":"3","event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:05:53,306 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='3'
+2025-12-08 12:05:53,808 - [asyncio] - ERROR - Exception in callback <built-in method task_wakeup of _asyncio.Task object at 0x7ff6426c5780>
+handle: <Handle Task.task_wakeup>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 714, in cancel
+    if self.done():
+       ^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object
+2025-12-08 12:05:53,878 - [root] - ERROR - Fatal error: maximum recursion depth exceeded
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/runner/workspace/bot.py", line 511, in main
+    await bot.run_forever()
+  File "/home/runner/workspace/bot.py", line 475, in run_forever
+    await self.stop()
+  File "/home/runner/workspace/bot.py", line 451, in stop
+    await asyncio.sleep(0.5)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in <module>
+    asyncio.run(bot_main())
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 189, in run
+    with Runner(debug=debug) as runner:
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 63, in __exit__
+    self.close()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 71, in close
+    _cancel_all_tasks(loop)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 199, in _cancel_all_tasks
+    task.cancel()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+RecursionError: maximum recursion depth exceeded
+2025-12-08 12:05:53,943 - [asyncio] - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1342' coro=<UltraFastTradingBot.stop() running at /home/runner/workspace/bot.py:462> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py:764]>
+2025-12-08 12:05:54,380 - [telethon.crypto.libssl] - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2025-12-08 12:05:54,380 - [telethon.crypto.aes] - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2025-12-08 12:05:54,968 - [bot] - INFO - ✅ Supabase credentials validated successfully
+2025-12-08 12:05:54,970 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:05:55,074 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:05:56,155 - [handlers_telethon] - INFO - 📝 Registering BOT client handlers...
+2025-12-08 12:05:56,155 - [handlers_telethon] - INFO - ✅ BOT client handlers registered
+2025-12-08 12:05:56,342 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:05:56,445 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:05:57,058 - [bot] - INFO - User client is already authenticated
+2025-12-08 12:05:57,323 - [handlers_telethon] - INFO - 📝 Registering USER client handlers...
+2025-12-08 12:05:57,323 - [handlers_telethon] - WARNING - ⚠️ No active channels to monitor
+2025-12-08 12:05:57,324 - [realtime._async.client] - INFO - Attempting to connect to WebSocket at wss://ofririwzonwekmyqgqlg.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcmlyaXd6b253ZWtteXFncWxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDM1MzYsImV4cCI6MjA3Njk3OTUzNn0.1PQ9Fg4V04kaCZQm_7c88p65cOWboAs1htzjvQ_Tsko
+2025-12-08 12:05:57,612 - [realtime._async.client] - INFO - WebSocket connection established successfully
+2025-12-08 12:05:57,613 - [realtime._async.client] - INFO - send: {"event":"phx_join","payload":{"config":{"broadcast":{"ack":false,"self":false},"presence":{"key":"","enabled":false},"private":false,"postgres_changes":[{"events":"UPDATE","table":"verify_requests","schema":"public"}]},"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcmlyaXd6b253ZWtteXFncWxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDM1MzYsImV4cCI6MjA3Njk3OTUzNn0.1PQ9Fg4V04kaCZQm_7c88p65cOWboAs1htzjvQ_Tsko"},"topic":"realtime:verify_status_updates","ref":"1","join_ref":null}
+2025-12-08 12:05:57,615 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:05:57,644 - [realtime._async.client] - INFO - receive: '{"ref":"1","event":"phx_reply","payload":{"status":"ok","response":{"postgres_changes":[{"id":35695495,"events":"UPDATE","schema":"public","table":"verify_requests"}]}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:05:57,644 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=[PostgresRowChange(id=35695495, events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'>, table='verify_requests', schema_='public', filter=None)])) ref='1'
+2025-12-08 12:05:57,644 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=[PostgresRowChange(id=35695495, events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'>, table='verify_requests', schema_='public', filter=None)])) ref='1'
+2025-12-08 12:05:57,645 - [realtime._async.channel] - INFO - id=35695495 events=<RealtimePostgresChangesListenEvent.Update: 'UPDATE'> table='verify_requests' schema_='public' filter=None, PostgresChangesCallback(callback=<bound method UltraFastTradingBot._handle_verification_update of <bot.UltraFastTradingBot object at 0x7f39b4489bd0>>, event='UPDATE', table='verify_requests', schema='public', filter=None, id=None)
+2025-12-08 12:05:57,645 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:05:57,645 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:05:58,073 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"system","payload":{"message":"Subscribed to PostgreSQL","status":"ok","extension":"postgres_changes","channel":"verify_status_updates"},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:05:58,075 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.system: 'system'> topic='realtime:verify_status_updates' payload=SuccessSystemPayload(channel='verify_status_updates', extension='postgres_changes', message='Subscribed to PostgreSQL', status='ok') ref=None
+2025-12-08 12:05:58,075 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.system: 'system'> topic='realtime:verify_status_updates' payload=SuccessSystemPayload(channel='verify_status_updates', extension='postgres_changes', message='Subscribed to PostgreSQL', status='ok') ref=None
+2025-12-08 12:06:22,617 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:06:22,644 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:06:22,645 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:06:47,619 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:06:47,647 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:06:47,652 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:07:12,620 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:07:12,654 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:07:12,655 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:07:37,620 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:07:37,648 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:07:37,648 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:08:02,621 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:08:02,648 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:08:02,649 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:08:27,621 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:08:27,652 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:08:27,653 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:08:52,621 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:08:52,654 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:08:52,655 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:09:17,623 - [realtime._async.client] - INFO - send: {"event":"heartbeat","payload":{},"topic":"phoenix","ref":null,"join_ref":null}
+2025-12-08 12:09:17,651 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"phoenix"}'
+2025-12-08 12:09:17,651 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='phoenix' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref=None
+2025-12-08 12:09:22,341 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 12:09:28,725 - [bot] - INFO - Received signal 15
+2025-12-08 12:09:28,964 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"2","join_ref":null}
+2025-12-08 12:09:28,966 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:09:28,967 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:09:28,968 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:09:29,016 - [realtime._async.client] - INFO - receive: '{"ref":"2","event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:09:29,016 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='2'
+2025-12-08 12:09:29,016 - [realtime._async.channel] - INFO - realtime:verify_status_updates : event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='2'
+2025-12-08 12:09:29,016 - [realtime._async.channel] - INFO - channel realtime:verify_status_updates leave
+2025-12-08 12:09:29,016 - [realtime._async.channel] - INFO - channel realtime:verify_status_updates closed
+2025-12-08 12:09:29,017 - [realtime._async.client] - INFO - receive: '{"ref":null,"event":"phx_close","payload":{},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:09:29,017 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.close: 'phx_close'> topic='realtime:verify_status_updates' payload={} ref=None
+2025-12-08 12:09:29,017 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"3","join_ref":null}
+2025-12-08 12:09:29,018 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:09:29,018 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:09:29,033 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:09:29,033 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:09:29,033 - [telethon.network.mtprotosender] - INFO - Disconnection from None complete!
+2025-12-08 12:09:29,059 - [realtime._async.client] - INFO - receive: '{"ref":"3","event":"phx_reply","payload":{"status":"ok","response":{}},"topic":"realtime:verify_status_updates"}'
+2025-12-08 12:09:29,060 - [realtime._async.client] - INFO - parsed message as event=<ChannelEvents.reply: 'phx_reply'> topic='realtime:verify_status_updates' payload=SuccessReplyMessage(status='ok', response=ReplyPostgresChanges(postgres_changes=None)) ref='3'
+2025-12-08 12:09:29,567 - [asyncio] - ERROR - Exception in callback <built-in method task_wakeup of _asyncio.Task object at 0x7f39b09c5a80>
+handle: <Handle Task.task_wakeup>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 714, in cancel
+    if self.done():
+       ^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object
+2025-12-08 12:09:29,592 - [root] - ERROR - Fatal error: maximum recursion depth exceeded
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/runner/workspace/bot.py", line 511, in main
+    await bot.run_forever()
+  File "/home/runner/workspace/bot.py", line 475, in run_forever
+    await self.stop()
+  File "/home/runner/workspace/bot.py", line 451, in stop
+    await asyncio.sleep(0.5)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in <module>
+    asyncio.run(bot_main())
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 189, in run
+    with Runner(debug=debug) as runner:
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 63, in __exit__
+    self.close()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 71, in close
+    _cancel_all_tasks(loop)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 199, in _cancel_all_tasks
+    task.cancel()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+RecursionError: maximum recursion depth exceeded
+2025-12-08 12:09:29,684 - [asyncio] - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-229' coro=<UltraFastTradingBot.stop() running at /home/runner/workspace/bot.py:462> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py:764]>
+2025-12-08 12:12:29,790 - [telethon.crypto.libssl] - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2025-12-08 12:12:29,819 - [telethon.crypto.aes] - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2025-12-08 12:12:31,002 - [bot] - INFO - ✅ Supabase credentials validated successfully
+2025-12-08 12:12:31,089 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-12-08 12:12:32,770 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-12-08 12:12:33,934 - [telethon.client.users] - INFO - Phone migrated to 4
+2025-12-08 12:12:33,935 - [telethon.client.telegrambaseclient] - INFO - Reconnecting to new data center 4
+2025-12-08 12:12:34,218 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-12-08 12:12:34,219 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-12-08 12:12:34,219 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:12:35,766 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:12:36,969 - [handlers_telethon] - INFO - 📝 Registering BOT client handlers...
+2025-12-08 12:12:36,971 - [handlers_telethon] - INFO - ✅ BOT client handlers registered
+2025-12-08 12:12:37,220 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-12-08 12:12:38,751 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-12-08 12:12:39,431 - [telethon.client.users] - INFO - Phone migrated to 4
+2025-12-08 12:12:39,431 - [telethon.client.telegrambaseclient] - INFO - Reconnecting to new data center 4
+2025-12-08 12:12:39,442 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-12-08 12:12:39,443 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-12-08 12:12:39,443 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:12:40,950 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:14:14,854 - [bot] - INFO - Received signal 15
+2025-12-08 12:14:15,216 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:14:15,216 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:14:15,217 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:14:15,261 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:14:15,262 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:14:15,319 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:14:15,320 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:14:15,320 - [telethon.network.mtprotosender] - INFO - Disconnection from None complete!
+2025-12-08 12:14:15,844 - [asyncio] - ERROR - Exception in callback <built-in method task_wakeup of _asyncio.Task object at 0x7f74b6fb4580>
+handle: <Handle Task.task_wakeup>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 714, in cancel
+    if self.done():
+       ^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object
+2025-12-08 12:14:15,869 - [root] - ERROR - Fatal error: maximum recursion depth exceeded
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/runner/workspace/bot.py", line 511, in main
+    await bot.run_forever()
+  File "/home/runner/workspace/bot.py", line 475, in run_forever
+    await self.stop()
+  File "/home/runner/workspace/bot.py", line 451, in stop
+    await asyncio.sleep(0.5)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in <module>
+    asyncio.run(bot_main())
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 189, in run
+    with Runner(debug=debug) as runner:
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 63, in __exit__
+    self.close()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 71, in close
+    _cancel_all_tasks(loop)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 199, in _cancel_all_tasks
+    task.cancel()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+RecursionError: maximum recursion depth exceeded
+2025-12-08 12:14:15,976 - [asyncio] - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-42' coro=<UltraFastTradingBot.stop() running at /home/runner/workspace/bot.py:462> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py:764]>
+2025-12-08 12:14:19,638 - [telethon.crypto.libssl] - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2025-12-08 12:14:19,639 - [telethon.crypto.aes] - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2025-12-08 12:14:20,431 - [bot] - INFO - ✅ Supabase credentials validated successfully
+2025-12-08 12:14:20,433 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:14:20,537 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:14:21,301 - [handlers_telethon] - INFO - 📝 Registering BOT client handlers...
+2025-12-08 12:14:21,302 - [handlers_telethon] - INFO - ✅ BOT client handlers registered
+2025-12-08 12:14:21,520 - [telethon.network.mtprotosender] - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-12-08 12:14:21,624 - [telethon.network.mtprotosender] - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:15:21,014 - [bot] - WARNING - Authentication failed: The phone code entered was invalid (caused by SignInRequest) - running in BOT-only mode
+2025-12-08 12:15:21,183 - [bot] - INFO - Running in BOT-only mode (no channel monitoring)
+2025-12-08 12:15:21,183 - [realtime._async.client] - INFO - Attempting to connect to WebSocket at wss://ofririwzonwekmyqgqlg.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcmlyaXd6b253ZWtteXFncWxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDM1MzYsImV4cCI6MjA3Njk3OTUzNn0.1PQ9Fg4V04kaCZQm_7c88p65cOWboAs1htzjvQ_Tsko
+2025-12-08 12:15:29,304 - [models] - DEBUG - 💾 Created new user 6601959348 in database with default settings
+2025-12-08 12:15:45,442 - [handlers_telethon] - INFO - 📋 User 6601959348 shown registration message (still waiting for wallet verification)
+2025-12-08 12:15:57,342 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 12:16:02,859 - [handlers_telethon] - INFO - 📋 User 6601959348 shown registration message (still waiting for wallet verification)
+2025-12-08 12:16:10,838 - [models] - DEBUG - 💾 Updated user 6601959348 in database
+2025-12-08 12:16:17,824 - [handlers_telethon] - INFO - 📋 User 6601959348 shown registration message (still waiting for wallet verification)
+2025-12-08 12:17:16,864 - [bot] - INFO - Received signal 15
+2025-12-08 12:17:16,892 - [bot] - INFO - Received signal 15
+2025-12-08 12:17:17,033 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"1","join_ref":null}
+2025-12-08 12:17:17,034 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:17:17,034 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:17:17,063 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:17:17,078 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"2","join_ref":null}
+2025-12-08 12:17:17,079 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:17:17,079 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:17:17,147 - [realtime._async.client] - INFO - send: {"event":"phx_leave","payload":{},"topic":"realtime:verify_status_updates","ref":"3","join_ref":null}
+2025-12-08 12:17:17,148 - [telethon.network.mtprotosender] - INFO - Not disconnecting (already have no connection)
+2025-12-08 12:17:17,161 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:17:17,161 - [telethon.network.mtprotosender] - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-12-08 12:17:17,161 - [telethon.network.mtprotosender] - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
+2025-12-08 12:17:17,162 - [telethon.network.mtprotosender] - INFO - Disconnection from None complete!
+2025-12-08 12:17:17,162 - [telethon.network.mtprotosender] - INFO - Disconnection from None complete!
+2025-12-08 12:17:17,768 - [asyncio] - ERROR - Exception in callback <built-in method task_wakeup of _asyncio.Task object at 0x7f9e0a5bc4c0>
+handle: <Handle Task.task_wakeup>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 714, in cancel
+    if self.done():
+       ^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object
+2025-12-08 12:17:17,798 - [root] - ERROR - Fatal error: maximum recursion depth exceeded
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/runner/workspace/bot.py", line 511, in main
+    await bot.run_forever()
+  File "/home/runner/workspace/bot.py", line 475, in run_forever
+    await self.stop()
+  File "/home/runner/workspace/bot.py", line 451, in stop
+    await asyncio.sleep(0.5)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in <module>
+    asyncio.run(bot_main())
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 189, in run
+    with Runner(debug=debug) as runner:
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 63, in __exit__
+    self.close()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 71, in close
+    _cancel_all_tasks(loop)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 199, in _cancel_all_tasks
+    task.cancel()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 718, in cancel
+    if child.cancel(msg=msg):
+       ^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 494 more times]
+RecursionError: maximum recursion depth exceeded
+2025-12-08 12:17:17,960 - [asyncio] - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-58' coro=<UltraFastTradingBot.stop() running at /home/runner/workspace/bot.py:462> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py:764]>
