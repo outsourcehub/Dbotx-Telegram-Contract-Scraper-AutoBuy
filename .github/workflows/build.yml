@@ -86,19 +86,31 @@ jobs:
               echo "❌ Build failed: main.exe not found"
               exit 1
             fi
-            echo "✅ Windows build validated"
+            echo "✅ Windows build validated: build/main.exe"
           elif [ "${{ matrix.os }}" == "macos-latest" ]; then
-            if [ ! -f "build/main.bin" ]; then
-              echo "❌ Build failed: main.bin not found"
+            # macOS: Check multiple possible locations
+            if [ -f "build/main.bin" ]; then
+              echo "✅ macOS build validated: build/main.bin"
+            elif [ -f "build/main.dist/main.bin" ]; then
+              echo "✅ macOS build validated: build/main.dist/main.bin"
+              mv build/main.dist/main.bin build/main.bin
+            elif [ -f "main.bin" ]; then
+              echo "✅ macOS build validated: main.bin (moving to build/)"
+              mkdir -p build
+              mv main.bin build/main.bin
+            elif [ -f "build/main.app/Contents/MacOS/main" ]; then
+              echo "✅ macOS build validated: build/main.app/Contents/MacOS/main (extracting)"
+              cp build/main.app/Contents/MacOS/main build/main.bin
+            else
+              echo "❌ Build failed: main.bin not found in any expected location"
               exit 1
             fi
-            echo "✅ macOS build validated"
           else
             if [ ! -f "build/main.bin" ]; then
               echo "❌ Build failed: main.bin not found"
               exit 1
             fi
-            echo "✅ Linux build validated"
+            echo "✅ Linux build validated: build/main.bin"
           fi
 
       - name: Prepare Windows Release
