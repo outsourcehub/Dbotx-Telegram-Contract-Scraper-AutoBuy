@@ -66,6 +66,18 @@ jobs:
           include-data-files: |
             config_local.example.py=config_local.example.py
 
+      - name: Debug - List Build Directory
+        shell: bash
+        run: |
+          echo "📁 Listing current directory:"
+          ls -la
+          echo ""
+          echo "📁 Listing build directory (if exists):"
+          ls -la build/ 2>/dev/null || echo "build/ directory not found"
+          echo ""
+          echo "📁 Searching for executables:"
+          find . -type f \( -name "main.bin" -o -name "main.exe" -o -name "main" -o -name "main.app" \) 2>/dev/null || echo "No executables found"
+
       - name: Validate Build
         shell: bash
         run: |
