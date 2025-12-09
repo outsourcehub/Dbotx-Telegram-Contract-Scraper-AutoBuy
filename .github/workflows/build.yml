@@ -88,21 +88,30 @@ jobs:
             fi
             echo "✅ Windows build validated: build/main.exe"
           elif [ "${{ matrix.os }}" == "macos-latest" ]; then
-            # macOS: Check multiple possible locations
-            if [ -f "build/main.bin" ]; then
+            # macOS: Check for app bundle first (most common Nuitka output)
+            if [ -f "build/main.app/Contents/MacOS/main" ]; then
+              echo "✅ macOS build validated: build/main.app/Contents/MacOS/main"
+              mkdir -p build
+              cp build/main.app/Contents/MacOS/main build/main.bin
+              chmod +x build/main.bin
+            elif [ -f "main.app/Contents/MacOS/main" ]; then
+              echo "✅ macOS build validated: main.app/Contents/MacOS/main"
+              mkdir -p build
+              cp main.app/Contents/MacOS/main build/main.bin
+              chmod +x build/main.bin
+            elif [ -f "build/main.bin" ]; then
               echo "✅ macOS build validated: build/main.bin"
             elif [ -f "build/main.dist/main.bin" ]; then
               echo "✅ macOS build validated: build/main.dist/main.bin"
               mv build/main.dist/main.bin build/main.bin
             elif [ -f "main.bin" ]; then
-              echo "✅ macOS build validated: main.bin (moving to build/)"
+              echo "✅ macOS build validated: main.bin"
               mkdir -p build
               mv main.bin build/main.bin
-            elif [ -f "build/main.app/Contents/MacOS/main" ]; then
-              echo "✅ macOS build validated: build/main.app/Contents/MacOS/main (extracting)"
-              cp build/main.app/Contents/MacOS/main build/main.bin
             else
-              echo "❌ Build failed: main.bin not found in any expected location"
+              echo "❌ Build failed: macOS executable not found"
+              echo "Debug: Listing all files in current directory:"
+              find . -type f -name "main*" 2>/dev/null || true
               exit 1
             fi
           else
