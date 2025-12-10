@@ -1,4 +1,3 @@
-
 name: Build Executables
 
 on:
@@ -66,86 +65,122 @@ jobs:
           include-data-files: |
             config_local.example.py=config_local.example.py
 
-      - name: Debug - List Build Directory
+      - name: Dump build output for debugging
         shell: bash
         run: |
-          echo "📁 Listing current directory:"
-          ls -la
-          echo ""
-          echo "📁 Listing build directory (if exists):"
-          ls -la build/ 2>/dev/null || echo "build/ directory not found"
-          echo ""
-          echo "📁 Searching for executables:"
-          find . -type f \( -name "main.bin" -o -name "main.exe" -o -name "main" -o -name "main.app" \) 2>/dev/null || echo "No executables found"
+          echo "=== Dumping likely build output folders for debugging ==="
+          echo "build/ listing (if exists):"
+          ls -la build || true
+          echo "Top-level dist directories (if any):"
+          ls -la */dist || true
+          echo "Find executables (top 200 lines):"
+          find . -type f \( -perm -111 -o -iname "*.exe" -o -iname "*.bin" \) -ls | sed -n '1,200p' || true
 
       - name: Validate Build
+        id: validate_build
         shell: bash
         run: |
-          if [ "${{ matrix.os }}" == "windows-latest" ]; then
-            if [ ! -f "build/main.exe" ]; then
-              echo "❌ Build failed: main.exe not found"
-              exit 1
+          set -euo pipefail
+          OS="${{ matrix.os }}"
+          echo "Searching for built artifact on runner for OS=$OS"
+
+          # Helper function: try to find a matching file (executable or named)
+          find_executable() {
+            local pattern="$1"
+            local result
+            # Prefer the build/ folder
+            if [ -d build ]; then
+              result=$(find build -type f -name "$pattern" -perm -111 2>/dev/null | head -n1 || true)
+              if [ -n "$result" ]; then
+                printf '%s' "$result"
+                return 0
+              fi
             fi
-            echo "✅ Windows build validated: build/main.exe"
-          elif [ "${{ matrix.os }}" == "macos-latest" ]; then
-            # macOS: Check for app bundle first (most common Nuitka output)
-            if [ -f "build/main.app/Contents/MacOS/main" ]; then
-              echo "✅ macOS build validated: build/main.app/Contents/MacOS/main"
-              mkdir -p build
-              cp build/main.app/Contents/MacOS/main build/main.bin
-              chmod +x build/main.bin
-            elif [ -f "main.app/Contents/MacOS/main" ]; then
-              echo "✅ macOS build validated: main.app/Contents/MacOS/main"
-              mkdir -p build
-              cp main.app/Contents/MacOS/main build/main.bin
-              chmod +x build/main.bin
-            elif [ -f "build/main.bin" ]; then
-              echo "✅ macOS build validated: build/main.bin"
-            elif [ -f "build/main.dist/main.bin" ]; then
-              echo "✅ macOS build validated: build/main.dist/main.bin"
-              mv build/main.dist/main.bin build/main.bin
-            elif [ -f "main.bin" ]; then
-              echo "✅ macOS build validated: main.bin"
-              mkdir -p build
-              mv main.bin build/main.bin
-            else
-              echo "❌ Build failed: macOS executable not found"
-              echo "Debug: Listing all files in current directory:"
-              find . -type f -name "main*" 2>/dev/null || true
-              exit 1
+            # Check common dist directories
+            result=$(find . -type f -path "*/dist/*" -name "$pattern" -perm -111 2>/dev/null | head -n1 || true)
+            if [ -n "$result" ]; then
+              printf '%s' "$result"
+              return 0
+            fi
+            # Finally search the repo for matches
+            result=$(find . -type f -name "$pattern" -perm -111 2>/dev/null | head -n1 || true)
+            if [ -n "$result" ]; then
+              printf '%s' "$result"
+              return 0
+            fi
+            return 1
+          }
+
+          BIN_PATH=""
+
+          if [ "$OS" = "windows-latest" ]; then
+            # look for .exe first
+            BIN_PATH=$(find_executable "*.exe" || true)
+            if [ -z "$BIN_PATH" ]; then
+              # fallback to any .exe anywhere (case-insensitive)
+              BIN_PATH=$(find . -type f -iname "*.exe" | head -n1 || true)
             fi
           else
-            if [ ! -f "build/main.bin" ]; then
-              echo "❌ Build failed: main.bin not found"
-              exit 1
+            # macOS / Linux: try common expected names
+            BIN_PATH=$(find_executable "main.bin" || true)
+            if [ -z "$BIN_PATH" ]; then
+              BIN_PATH=$(find_executable "main" || true)
             fi
-            echo "✅ Linux build validated: build/main.bin"
+            if [ -z "$BIN_PATH" ]; then
+              BIN_PATH=$(find_executable "*main*" || true)
+            fi
+            if [ -z "$BIN_PATH" ]; then
+              # try known Nuitka pattern: <module>.dist/<program>
+              BIN_PATH=$(find . -type f -path "*/.dist/*" -perm -111 2>/dev/null | head -n1 || true)
+            fi
           fi
+
+          if [ -z "$BIN_PATH" ]; then
+            echo "❌ Build failed: no executable found."
+            echo "=== Debug listing (partial) ==="
+            echo "build/ contents:"
+            ls -la build || true
+            echo "Repo top-level files and dirs (partial):"
+            find . -maxdepth 4 -type f -ls | sed -n '1,200p' || true
+            exit 1
+          fi
+
+          echo "Found built executable: $BIN_PATH"
+          # export for later steps
+          echo "binary_path=$BIN_PATH" >> $GITHUB_OUTPUT
 
       - name: Prepare Windows Release
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path release
-          Copy-Item build/main.exe release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Windows.exe
+          $bin = '${{ steps.validate_build.outputs.binary_path }}'
+          Write-Host "Copying built binary: $bin"
+          Copy-Item $bin "release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Windows.exe"
           Copy-Item config_local.example.py release/
           Copy-Item README_SETUP.md release/ -ErrorAction SilentlyContinue
 
       - name: Prepare macOS Release
         if: matrix.os == 'macos-latest'
+        shell: bash
         run: |
           mkdir -p release
-          cp build/main.bin release/DbotxScraperVtech-${{ steps.version.outputs.version }}-macOS
-          chmod +x release/DbotxScraperVtech-${{ steps.version.outputs.version }}-macOS
+          BIN_PATH="${{ steps.validate_build.outputs.binary_path }}"
+          echo "Copying built binary: $BIN_PATH"
+          cp "$BIN_PATH" "release/DbotxScraperVtech-${{ steps.version.outputs.version }}-macOS"
+          chmod +x "release/DbotxScraperVtech-${{ steps.version.outputs.version }}-macOS"
           cp config_local.example.py release/
           cp README_SETUP.md release/ || true
 
       - name: Prepare Linux Release
         if: matrix.os == 'ubuntu-latest'
+        shell: bash
         run: |
           mkdir -p release
-          cp build/main.bin release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Linux
-          chmod +x release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Linux
+          BIN_PATH="${{ steps.validate_build.outputs.binary_path }}"
+          echo "Copying built binary: $BIN_PATH"
+          cp "$BIN_PATH" "release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Linux"
+          chmod +x "release/DbotxScraperVtech-${{ steps.version.outputs.version }}-Linux"
           cp config_local.example.py release/
           cp README_SETUP.md release/ || true
 
