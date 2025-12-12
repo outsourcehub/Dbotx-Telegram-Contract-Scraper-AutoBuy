@@ -25,7 +25,7 @@ Before you begin, you'll need:
 
 ### Step 1: Get the Code (OPTIONAL: This step only applies if you are hosting this 24/7 online)
 
-**If on GitHub**: Go to [https://github.com/outsourcehub/Blazing-Bot-Telegram-Autobuy-Scraper](https://github.com/outsourcehub/Blazing-Bot-Telegram-Autobuy-Scraper) and fork/clone it
+**If on GitHub**: Go to [https://github.com/outsourcehub/Dbotx-Telegram-Contract-Scraper-AutoBuy](https://github.com/outsourcehub/Dbotx-Telegram-Contract-Scraper-AutoBuy) and fork/clone it
 
 ### Step 2: Get Telegram Credentials
 
